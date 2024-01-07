@@ -7,7 +7,7 @@
 
 int saveBmp(char* argv[])
 {
-  //分別讀取盪案
+  //分別讀取檔案
   FILE *fdim = fopen(argv[6], "r");
   FILE *fr = fopen(argv[3], "r");
   FILE *fg = fopen(argv[4], "r");
@@ -118,7 +118,7 @@ int saveBmp(char* argv[])
   // 寫入標頭檔
   fwrite(header, sizeof(unsigned char), BMP_HEADER_SIZE, fp);
   fwrite(infoHeader, sizeof(unsigned char), BMP_INFO_HEADER_SIZE, fp);
-  int tmp;
+
   // 開始寫入pixels
   for (int i = 0; i < height; i++)
   {
