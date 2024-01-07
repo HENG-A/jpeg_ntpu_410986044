@@ -15,4 +15,4 @@ clean:
 demo0: all
 	./encoder 0 KimberlyNCat.bmp R.txt G.txt B.txt dim.txt
 	./decoder 0 ResKimberlyNCat.bmp R.txt G.txt B.txt dim.txt
-
+	cmp KimberlyNCat.bmp ResKimberlyNCat.bmp
